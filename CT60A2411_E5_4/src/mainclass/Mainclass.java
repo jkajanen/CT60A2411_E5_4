@@ -16,7 +16,11 @@ public class Mainclass {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("CT60A2411_E5_4 initial commit and push to GitHub!");
+        //System.out.println("CT60A2411_E5_4 initial commit and push to GitHub!");
+        
+        Car myCar = new Car();
+        
+        myCar.buildCar();
     }
     
 }
