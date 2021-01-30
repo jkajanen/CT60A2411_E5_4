@@ -21,6 +21,7 @@ public class Mainclass {
         Car myCar = new Car();
         
         myCar.buildCar();
+        myCar.reportCarParts();
     }
     
 }

@@ -12,6 +12,11 @@ package mainclass;
 public class Car {
     public String carManufacturer;
     public String carModel;
+    private String carPartBody;
+    private String carPartChassis;
+    private String carPartEngine;
+    private String carPartWheel;
+    private int numberOfAxles;
     
     public void print( String carPart)    {
     
@@ -23,24 +28,35 @@ public class Car {
         int i;
         
         Body newBody = new Body(); 
-        carPart = newBody.carPart;
-        this.print( carPart );
+        carPartBody = newBody.carPart;
+        this.print( carPartBody );
         Chassis newChassis = new Chassis();
-        carPart = newChassis.carPart;
-        this.print( carPart );
+        carPartChassis = newChassis.carPart;
+        this.print( carPartChassis );
         Engine newEngine = new Engine();
-        carPart = newEngine.carPart;
-        this.print( carPart );
+        carPartEngine = newEngine.carPart;
+        this.print( carPartEngine );
         Wheel newWheel = new Wheel();
-        for ( i = 0; i < newBody.getBodyNumberOfAxles(); i++ ) {
-            carPart = newWheel.carPart;
-            this.print( carPart );
-            
+        numberOfAxles = newBody.getBodyNumberOfAxles();
+        for ( i = 0; i < numberOfAxles; i++ ) {
+            carPartWheel = newWheel.carPart;
+            this.print( carPartWheel );    
         }
+    }
             
-            
-           
+     public void reportCarParts() {
          
-    };
-
+        System.out.println("Car parts:");
+        if ( carPartBody != null )
+             System.out.println("\t" + carPartBody);
+        if ( carPartChassis != null )
+             System.out.println("\t" + carPartChassis);
+        if ( carPartEngine != null )
+             System.out.println("\t" + carPartEngine);
+        if ( carPartWheel != null ) {
+             System.out.println("\t" + numberOfAxles + " " + carPartWheel);
+        }
+                
+    }       
+           
 }
